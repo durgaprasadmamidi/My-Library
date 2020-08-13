@@ -56,15 +56,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAuthor"
+            android:id="@+id/txtBook"
             android:textStyle="bold"
             android:textSize="18sp"
             android:text="Author :"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAuthorName"
-            android:layout_toEndOf="@+id/txtAuthor"
+            android:id="@+id/txtBookName"
+            android:layout_toEndOf="@+id/txtBook"
             android:textSize="18sp"
             android:layout_marginStart="4dp"
             android:text="author Name "/>
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:layout_below="@+id/txtAuthorName"
+            android:layout_below="@+id/txtBookName"
             android:layout_alignParentStart="true"
             android:text="Short desc :"
             android:id="@+id/shortDesc"
@@ -82,7 +82,7 @@
             android:id="@+id/shortDescMatter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/txtAuthorName"
+            android:layout_below="@+id/txtBookName"
             android:layout_toEndOf="@+id/shortDesc"
             android:layout_marginStart="4dp"
             android:text="matter goes here"

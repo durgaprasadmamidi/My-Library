@@ -1,11 +1,11 @@
 package com.durgaprasad.mylibrary;
 
 import android.content.Context;
+import android.content.Intent;
 import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Transformation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -49,7 +49,8 @@ public class BookRecyclerAdapter extends RecyclerView.Adapter<BookRecyclerAdapte
         holder.parent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(mContext, books.get(position).getName() + " selected", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(mContext,BookActivity.class);
+                mContext.startActivity(intent);
             }
         });
         holder.authorName.setText(books.get(position).getAuthor());
@@ -88,7 +89,7 @@ public class BookRecyclerAdapter extends RecyclerView.Adapter<BookRecyclerAdapte
             parent = itemView.findViewById(R.id.parent);
             imgBook = itemView.findViewById(R.id.bookImageView);
             txtName = itemView.findViewById(R.id.txtBookName);
-            authorName = itemView.findViewById(R.id.txtAuthorName);
+            authorName = itemView.findViewById(R.id.txtBookName);
             shortDesc = itemView.findViewById(R.id.shortDescMatter);
             downArrow = itemView.findViewById(R.id.downArrow);
             upArrow = itemView.findViewById(R.id.upArrow);
